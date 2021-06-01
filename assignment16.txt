@@ -1,0 +1,4 @@
+* learn about handling DOM events:
+1. from javascript.info (Part 2): 2.1, 2.2, [4.1 - 4.4]
+
+* add the necessary JS code in the associated projects to achieve the desired page behavior as described in the instructions for each project.
