@@ -31,6 +31,7 @@ function assignment(){
             }
         }
     }
+        
 }
  
 button.onclick = function(){
