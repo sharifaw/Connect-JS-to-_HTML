@@ -26,31 +26,37 @@ function changeColor(event)
 {
     const content = document.getElementById('content');
     event.preventDefault();
-    for (var index = 0; index < select.length; index++)
-    {
-        if (select.options[index].selected === true)
-        {
-            if(select.options[index].value === "red")
-            {
-            
-               content.classList.add('red');
-            }
-            if(select.options[index].value === "green")
-            {
-                content.classList.add('green');
-            }
-            if(select.options[index].value === "blue")
-            {
-                content.classList.add('blue');
-            }
-            if(select.options[index].value === "purple")
-            {
-                content.classList.add('purple');
 
-            }
+    // another solution
+    // if (select.value !== ""){
+    //     content.classList.add(`${select.value}`);
+    // }
+
+    // for (var index = 0; index < select.length; index++)
+    // {
+    //     if (select.options[index].selected === true)
+    //     {
+    //         if(select.options[index].value === "red")
+    //         {
             
-        }
-    }
+    //            content.classList.add('red');
+    //         }
+    //         if(select.options[index].value === "green")
+    //         {
+    //             content.classList.add('green');
+    //         }
+    //         if(select.options[index].value === "blue")
+    //         {
+    //             content.classList.add('blue');
+    //         }
+    //         if(select.options[index].value === "purple")
+    //         {
+    //             content.classList.add('purple');
+
+    //         }
+            
+    //     }
+    // }
     
 }
 
