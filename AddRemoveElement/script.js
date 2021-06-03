@@ -10,7 +10,8 @@ button1.addEventListener('click',() =>{
     `;
     const button2 = document.getElementsByTagName('button')[1];
     button2.addEventListener('click',() =>{
-    elements.innerHTML='';
+    const div2 = document.getElementsByClassName('element')[0];
+    div2.innerHTML='';
     })
 })
 

@@ -24,6 +24,7 @@ function checkOptions() {
 
 function changeColor(event)
 {
+    const content = document.getElementById('content');
     event.preventDefault();
     for (var index = 0; index < select.length; index++)
     {
@@ -31,19 +32,21 @@ function changeColor(event)
         {
             if(select.options[index].value === "red")
             {
-            document.body.classList.add('red');
+            
+               content.classList.add('red');
             }
             if(select.options[index].value === "green")
             {
-            document.body.classList.add('green');
+                content.classList.add('green');
             }
             if(select.options[index].value === "blue")
             {
-            document.body.classList.add('blue');
+                content.classList.add('blue');
             }
             if(select.options[index].value === "purple")
             {
-            document.body.classList.add('purple');
+                content.classList.add('purple');
+
             }
             
         }
