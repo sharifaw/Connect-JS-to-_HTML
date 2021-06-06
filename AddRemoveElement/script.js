@@ -1,17 +1,27 @@
 const button1 = document.getElementById('add-element');
+const elements = document.getElementById('elements');
+let index = 0;
+let elementNumber = 0;
+const button2 = document.getElementsByClassName('button2')[index-1];
+
 button1.addEventListener('click',() =>{
-    elements.innerHTML=
+    index++;
+    elements.insertAdjacentHTML("beforeend",
     `<div class="element">
-        <h3>Element 4</h3>
+        <h3 >Element ${index}</h3>
         <h4>This is an element</h4>
-        <button>Delete</button>
+        <button class="button2">Delete</button>
     </div>
 
-    `;
-    const button2 = document.getElementsByTagName('button')[1];
-    button2.addEventListener('click',() =>{
-    const div2 = document.getElementsByClassName('element')[0];
-    div2.innerHTML='';
-    })
+    `);
+    
 })
 
+
+    elements.addEventListener('click',(event) =>{
+    console.log(event.target.tagName)
+        if(event.target.tagName == "BUTTON"){
+        event.target.parentElement.remove();
+    };
+    
+    })

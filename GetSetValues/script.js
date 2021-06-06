@@ -1,3 +1,6 @@
+const value1 = document.getElementById('value1');
+const value2 = document.getElementById('value2');
+
 value1.addEventListener("input",checkNumber);
 value2.addEventListener("input",checkNumber);
 

@@ -1,23 +1,35 @@
 const select = document.getElementsByTagName('select')[0];
-select.addEventListener('change',checkOptions);
+const submit = document.getElementById('submit');
+const content = document.getElementById('content');
 
+select.addEventListener('change',checkOptions);
 submit.addEventListener('click',changeColor);
 
 
-function checkOptions() {
-    for (var index = 0; index < select.length; index++) {
-        if (select.options[index].selected === true){
-                if (select.options[index].value != "")
-                {
-                    
-                    submit.classList.remove('disabled');
-                }
-                else
-                {
-                    submit.classList.add('disabled');
-                }
-        }
+function checkOptions(event) {
+    event.preventDefault();
+    if (event.target.value !=""){
+        submit.classList.remove('disabled');
     }
+    else {
+        content.className= `content `;
+        submit.classList.add('disabled');
+    }
+
+    // for (var index = 0; index < select.length; index++) {
+    //     if (select.options[index].selected === true){
+
+    //             if (select.options[index].value != "")
+    //             {
+    //                 submit.classList.remove('disabled');
+    //             }
+    //             else
+    //             {
+                    
+    //                 submit.classList.add('disabled');
+    //             }
+    //     }
+    // }
 }
 
 
@@ -26,12 +38,14 @@ function changeColor(event)
 {
     const content = document.getElementById('content');
     event.preventDefault();
+    
+    
+    if (select.value !== ""){
+        content.className= `content ` + select.value;
+    }
+    
 
     // another solution
-    // if (select.value !== ""){
-    //     content.classList.add(`${select.value}`);
-    // }
-
     // for (var index = 0; index < select.length; index++)
     // {
     //     if (select.options[index].selected === true)
